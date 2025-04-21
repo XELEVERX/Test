@@ -33,7 +33,12 @@ class TestWin(QWidget):
 
         self.show()
 
-        
+    def next_click(self):
+        self.tw = TestWin()
+        self.hide()
+
+    def connects(self):
+        self.btn_next.clicked.connect(self.next_click)
 
 
 win_x, win_y = 200, 100
